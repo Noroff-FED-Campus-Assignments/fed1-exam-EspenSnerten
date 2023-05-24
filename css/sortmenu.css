@@ -1,0 +1,101 @@
+.archive_interaction_container button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+}
+
+.sort_menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute; 
+  width: 150px;
+  gap: 1rem;
+  list-style: none;
+  padding: 1rem 0;
+  border-top: solid 3px var(--main-btn-color);
+  border-bottom: solid 3px var(--main-btn-color);
+  background-color: var(--main-bg-color);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.336);
+  top: -15px;
+  transition: .7s;
+}
+
+.sort_menu.open {
+  top: 310px;
+}
+
+button.sort_menu_btn {
+  position: absolute;
+  z-index: 6;
+  background-color: var(--main-bg-color);
+  transition: .3s;
+  padding: 1rem 0;
+  top: 272px;
+}
+
+button.sort_menu_btn i{
+  transition: .5s;
+  margin-left: .2rem;
+}
+
+#sort-icon.open {
+  margin-left: 5.8rem;
+  display: inline;
+  transform: rotate(180deg) !important;
+}
+
+.menu_block {
+  background-color: var(--main-bg-color);
+  width: 100%;
+  padding: 4rem 0;
+  z-index: 7;
+}
+
+
+.search_container {
+  display: flex;
+  margin-left: 70%;
+}
+
+.search_container input {
+  outline: none;
+  border: none;
+  border-bottom: solid 2px black;
+  height: 30px;
+  width: 120px;
+  font-size: 17px;
+  transition: .4s;
+  padding-left: 2.5rem;
+  background-color: transparent;
+}
+
+.search_container input::placeholder {
+  color: black;
+}
+
+.search_container input:focus {
+  width: 100%;
+}
+
+.search_form {
+  position: relative;
+  width: 100%;
+}
+
+.search_form i {
+  position: absolute;
+  right: 230px;
+  top: 4px;
+  font-size: 19px;
+}
+
+.search_error {
+  height: 55vh;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.search_error i {
+  margin-right: 1rem;
+}

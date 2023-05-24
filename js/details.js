@@ -1,46 +1,140 @@
-/*
-============================================
-Constants
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L66
-============================================
-*/
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
+const postId = params.get("id");
+const airtableApiKey = "keyEqTijnaavQtYbr"; // this is not best practice and is just here for convenience sake for this project
+const airtableBaseId = "appcDjjskefLIyJVY";
+const airtableTableName = "tbl8r1smekKGfpewz";
+const fields = ["Title", "PostMarkdown", "author", "date", "image", "likes"];
 
-// TODO: Get DOM elements from the DOM
+const apiUrl = `https://api.airtable.com/v0/${airtableBaseId}/${airtableTableName}/${postId}`;
 
-// TODO: Get the query parameter from the URL
+const loader = document.getElementById("loader");
+loader.style.display = "block";
 
-// TODO: Get the id from the query parameter
+fetch(apiUrl, {
+  headers: {
+    Authorization: `Bearer ${airtableApiKey}`,
+  },
+})
+  .then((response) => response.json())
+  .then((data) => {
+    try {
+      loader.style.display = "none";
 
-// TODO: Create a new URL with the id @example: https://www.youtube.com/shorts/ps7EkRaRMzs
+      console.log(data);
+      const container = document.getElementById("post-container");
+      const title = data.fields.Title;
+      const postmarkdown = data.fields.PostMarkdown;
+      const author = data.fields.author;
+      const date = data.fields.date;
+      const image = data.fields.image
+        ? `<img src="${data.fields.image[0].url}" class="image-modal-trigger">`
+        : "";
+      let likes = data.fields.likes;
 
-/*
-============================================
-DOM manipulation
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L89
-============================================
-*/
+      const pageTitle = document.querySelector("title");
+      pageTitle.innerText = title;
 
-// TODO: Fetch and Render the list to the DOM
+      const html = `
+            <div class="blog_post">
+              ${image}
+              <div class="blog_post_info">
+                <div class="blog_info_wrapper">
+                  <p><i class="bi bi-person icon_hidden"></i><span>Author:</span> ${author}</p>
+                  <p><i class="bi bi-calendar3 icon_hidden"></i><span>Published on:</span> ${date}</p>
+                </div>
+                <div class="likes" id="likesContainer"><p>${likes}</p> <button id="likeBtn"><i class="bi bi-heart"></i></button></div>
+              </div>
+              <h2 class="title">${title}</h2>
+              <div class="post_text">
+                <p>${postmarkdown}</p>
+              </div>
+            </div>
+          `;
+      container.innerHTML += html;
 
-// TODO: Create event listeners for the filters and the search
+      const imageModalTriggers = document.getElementsByClassName(
+        "image-modal-trigger"
+      );
+      for (let i = 0; i < imageModalTriggers.length; i++) {
+        const trigger = imageModalTriggers[i];
+        trigger.addEventListener("click", () => {
+          const imageUrl = trigger.getAttribute("src");
+          const modal = createImageModal(imageUrl);
+          document.body.appendChild(modal);
+        });
+      }
 
-/*
-============================================
-Data fectching
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L104
-============================================
-*/
+      const likeBtn = document.getElementById("likeBtn");
+      likeBtn.addEventListener("click", () => {
+        likes++;
+        document.getElementById(
+          "likesContainer"
+        ).innerHTML = `${likes} <button id="likeBtn"><i class="bi bi-heart"></i></button>`;
 
-// TODO: Fetch an a single of objects from the API
+        const updateData = {
+          fields: {
+            likes: likes,
+          },
+        };
+        fetch(apiUrl, {
+          method: "PATCH",
+          headers: {
+            Authorization: `Bearer ${airtableApiKey}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(updateData),
+        })
+          .then((response) => response.json())
+          .then((updatedRecord) => {
+            console.log("Like count updated:", updatedRecord);
+          })
+          .catch((error) => {
+            console.error("Error updating like count:", error);
+          });
+      });
+    } catch (error) {
+      loader.style.display = "none";
+      const errorContainer = document.getElementById("error-container");
+      const backBtn = document.getElementById("back");
+      const errorMessage = `
+            <div class="error_message">
+              <p> 
+                <i class="bi bi-emoji-frown"></i>
+                &nbsp;Looks like something went wrong. Please try again later.
+              </p>
+            </div>
+          `;
+      backBtn.classList.add("hidden");
+      errorContainer.innerHTML = errorMessage;
+      console.error(error);
+    }
+  })
+  .catch((error) => {
+    loader.style.display = "none";
+    console.error(error);
+  });
 
-/*
-============================================
-Helper functions
-============================================
-*/
+function createImageModal(imageUrl) {
+  const modal = document.createElement("div");
+  modal.classList.add("image-modal");
+  modal.innerHTML = `
+        <div class="image-modal-content">
+          <span class="image-modal-close">&times;</span>
+          <img src="${imageUrl}" class="image-modal-image">
+        </div>
+      `;
 
-/**
- * TODO: Create a function to create a DOM element.
- * @example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/src/js/detail.js#L36
- * @param {item} item The object with properties from the fetched JSON data.
- */
+  const closeModal = () => modal.remove();
+
+  modal.addEventListener("click", (event) => {
+    if (
+      event.target.classList.contains("image-modal") ||
+      event.target.classList.contains("image-modal-close")
+    ) {
+      closeModal();
+    }
+  });
+
+  return modal;
+}

@@ -1,0 +1,36 @@
+.legal_main {
+  display: flex;
+  flex-direction: column;
+  min-width: 850px;
+  width: 55%;
+  justify-content: center;
+  margin: 0 auto 6rem auto;
+}
+
+.legal_main span {
+  font-weight: bold;
+}
+
+.legal_main h1 {
+  margin: 5rem 0 3rem 0;
+  font-size: 40px;
+}
+
+.legal_main h2 {
+  margin: 4rem 0 0 0;
+  font-size: 20px;
+}
+
+.legal_main p {
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin: 1.5rem 0 0 0;
+  width: 80%;
+  min-width: 700px;
+}
+
+.legal_p_bottom a {
+  text-decoration: underline;
+  color: black;
+  font-weight: bold;
+}
