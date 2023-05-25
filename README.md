@@ -62,7 +62,7 @@ All of these todo's must be done to pass the asssignment.
 
 ## End-user success criteria (Optional - 100%)
 
-- [ ] End-user can search for a specific item.
+- [x] End-user can search for a specific item.
 - [x] End-user can filter the list.
 - [ ] End-user can sort list by;
   - [ ] Name ascending order
@@ -83,7 +83,7 @@ All of these todo's must be done to pass the asssignment.
 - [ ] As a stakeholder, I want to view the website analytics.
 - [x] As a stakeholder, I want to show my customers a disclamer on the website, so that they are aware of the terms and conditions of using the website.
 - [ ] As a customer, I want to ensure that my personal information submitted through the contact form is kept secure and not shared with any third-party entities.
-- [ ] As a customer, I want to be able to sort, filter, or search the blog posts, so that I can quickly find the content that is most relevant to me.
+- [x] As a customer, I want to be able to sort, filter, or search the blog posts, so that I can quickly find the content that is most relevant to me.
 - [ ] As a customer, I want to be able to submit comments on a blog post, so that I can engage with other readers and share my thoughts on the topic.
 
 - [ ] [End-user experiences a complete custom UI design.](https://www.figma.com/file/KExTTAE75DRhq2xTvapFR4/FED-Whiteboard?node-id=0%3A1&t=UItKehGgT8gRlibY-1)
