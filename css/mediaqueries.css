@@ -50,6 +50,10 @@
     z-index: 5;
   }
 
+  ul.mobile_nav_box {
+    list-style: none;
+  }
+
   .mobile_nav.open {
     top: 147.2px;
   }
