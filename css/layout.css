@@ -53,3 +53,12 @@ body {
   max-width: 1000px;
   margin: 40px auto 0 auto;
 }
+
+.fade-section {
+  opacity: 0;
+  transition: opacity 1.2s;
+}
+
+.fade-section.fade-in {
+  opacity: 1;
+}

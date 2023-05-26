@@ -9,6 +9,9 @@ function loadPosts() {
   const loader = document.getElementById("loader");
   loader.classList.remove("hidden");
 
+  const loadMoreBtn = document.getElementById("load-more-btn");
+  loadMoreBtn.classList.add("hidden");
+
   fetch(
     `https://api.airtable.com/v0/${airtableBaseId}/${airtableTableName}?sort%5B0%5D%5Bfield%5D=date&sort%5B0%5D%5Bdirection%5D=desc`,
     {

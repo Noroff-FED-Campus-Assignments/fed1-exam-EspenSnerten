@@ -50,6 +50,7 @@ header {
 
 .nav_box a:hover {
   color: var(--main-btn-color);
+  transform: translateY(10px);
 }
 
 /* mobile menu */ 
@@ -65,4 +66,3 @@ header {
 .mobile_button {
   display: none;
 }
-
