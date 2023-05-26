@@ -76,3 +76,12 @@ button {
   cursor: pointer;
 }
 
+html::-webkit-scrollbar{
+  width: 4px;
+  height: 4px;
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--main-btn-color);
+}
