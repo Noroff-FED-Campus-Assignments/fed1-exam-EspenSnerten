@@ -56,7 +56,7 @@ body {
 
 .fade-section {
   opacity: 0;
-  transition: opacity 1.2s;
+  transition: opacity 1s;
 }
 
 .fade-section.fade-in {

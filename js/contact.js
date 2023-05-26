@@ -18,7 +18,7 @@ form.addEventListener("submit", (e) => {
     setTimeout(() => {
       successModal.classList.add("modal-content");
       postToAirtable();
-    }, 1000);
+    }, 600);
   }
 });
 
