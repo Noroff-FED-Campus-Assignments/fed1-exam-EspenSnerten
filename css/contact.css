@@ -11,6 +11,7 @@ select:-webkit-autofill:focus {
   -webkit-text-fill-color: rgb(240, 240, 240);
   -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0) inset;
   transition: background-color 5000s ease-in-out 0s;
+  border-radius: 0;
 }
 
 .contact_container {
@@ -69,6 +70,7 @@ select:-webkit-autofill:focus {
   outline: none;
   color: white;
   display: block;
+  border-radius: 0;
 }
 
 .form_box input {
@@ -86,7 +88,7 @@ select:-webkit-autofill:focus {
 
 .contact_box button {
   border: none;
-  background-color: rgba(1, 80, 124, 1);
+  background-color: var(--main-btn-color);
   color: rgba(242, 235, 235, 1);
   cursor: pointer;
   width: 120px;
@@ -95,6 +97,11 @@ select:-webkit-autofill:focus {
   padding: 0.5rem 2rem;
   border-radius: 3px;
   margin: 1rem 0 2rem 0;
+  transition: .3s;
+}
+
+.contact_box button:hover {
+  transform: scale(.93);
 }
 
 .contact_info_box {
