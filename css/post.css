@@ -145,7 +145,7 @@ h2.title {
 
 #likeBtn i {
   vertical-align: top;
-  color: black;
+  color: var(--main-text-color);
 }
 
 .icon_hidden {

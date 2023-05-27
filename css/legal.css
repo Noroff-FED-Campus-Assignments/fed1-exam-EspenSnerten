@@ -31,6 +31,6 @@
 
 .legal_p_bottom a {
   text-decoration: underline;
-  color: black;
+  color: var(--main-text-color);
   font-weight: bold;
 }

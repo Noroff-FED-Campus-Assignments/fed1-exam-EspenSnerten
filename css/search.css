@@ -34,7 +34,7 @@
 }
 
 .search_container input::placeholder {
-  color: black;
+  color: var(--main-text-color);
 }
 
 .search_container input:focus {

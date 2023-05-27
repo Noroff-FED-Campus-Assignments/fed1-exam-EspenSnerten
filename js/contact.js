@@ -87,6 +87,8 @@ function validateForm() {
 
   if (subjectValue === "") {
     setErrorFor(subject, "Please state the subject of your message");
+  } else if (subjectValue.length <= 15) {
+    setErrorFor(subject, "Minimum required characters is 15");
   } else {
     setSuccessfor(subject);
   }

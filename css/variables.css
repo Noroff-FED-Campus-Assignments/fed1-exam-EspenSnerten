@@ -1,11 +1,6 @@
-/*!
- * Variables
- * @tutorial https://web.dev/at-property/
- * @example https://fed-vocational-astro-course.vercel.app/en/html-css/module-4/css-variables
- */
-
 :root {
     --main-bg-color: rgba(234, 234, 234, 1);
     --main-footer-color: rgba(23, 22, 22, 1);
     --main-btn-color: rgba(1, 80, 124, 1);
+    --main-text-color: rgb(0, 0, 0); 
 }

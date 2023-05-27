@@ -40,7 +40,7 @@ header {
 }
 
 .nav_box a {
-  color: black;
+  color: var(--main-text-color);
   font-family: reitam;
   font-size: 20px;
   text-align: center;
