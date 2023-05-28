@@ -61,7 +61,7 @@ select:-webkit-autofill:focus {
 
 .form_box input,
 .form_box textarea {
-  background-color: rgba(23, 22, 22, 1);
+  background-color: transparent;
   resize: none;
   border: none;
   border-bottom: solid 2px rgba(242, 235, 235, 1);

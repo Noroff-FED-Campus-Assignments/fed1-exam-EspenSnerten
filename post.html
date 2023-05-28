@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="This is InsightWave's individual blog post page, here you can read blog post"
+      content="This is InsightWave's individual blog post page, here you can read blog posts"
     />
     <meta name="keywords" content="HTML, CSS, JavaScript, blog site," />
     <meta name="author" content="Espen Henriksen Snerten" />
@@ -101,6 +101,35 @@
       </div>
       <div id="loader" class="loader"></div>
       <section id="post-container" class="post_container"></section>
+
+      <section id="comment-section" class="comment_section">
+        <h2>Comments</h2>
+        <div id="comment-container"></div>
+        <form action="post" id="comment-form" class="comment_form">
+          <div class="comment_form_column">
+            <label for="name">Your name</label>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              id="comment-name"
+              name="name"
+              required
+            />
+          </div>
+
+          <div class="comment_form_column">
+            <label for="comment">Comment</label>
+            <textarea
+              name="comment"
+              id="comment-text"
+              required
+              placeholder="What do you want to share.."
+            ></textarea>
+          </div>
+
+          <button id="comment-btn" type="submit">Submit</button>
+        </form>
+      </section>
     </main>
 
     <footer class="footer_container">
@@ -116,11 +145,27 @@
         </ul>
       </div>
       <div class="footer_column">
-        <div class="footer_some some_box">
-          <a href="" class="some_icon"><i class="bi bi-twitter"></i> </a>
-          <a href="" class="some_icon"><i class="bi bi-instagram"></i> </a>
-          <a href="" class="some_icon"><i class="bi bi-facebook"></i> </a>
-        </div>
+        <div class="footer_column">
+          <div class="footer_some some_box">
+            <a
+              href="https://twitter.com/?lang=en"
+              class="some_icon"
+              target="_blank"
+              ><i class="bi bi-twitter"></i>
+            </a>
+            <a 
+              href="https://www.instagram.com/" 
+              class="some_icon" 
+              target="_blank"
+              ><i class="bi bi-instagram"></i>
+            </a>
+            <a 
+              href="https://www.facebook.com/" 
+              class="some_icon" 
+              target="_blank"
+              ><i class="bi bi-facebook"></i>
+            </a>
+          </div>
         <small>Copyright © 2023 insight Inc. All rights reserved.</small>
       </div>
     </footer>

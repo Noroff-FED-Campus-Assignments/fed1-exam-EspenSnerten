@@ -9,6 +9,7 @@ export default defineConfig({
         // ADD YOUR PAGES HERE
         blog: resolve(__dirname, "archive.html"),
         blogDetail: resolve(__dirname, "post.html"),
+        blogDetailViaCarousel: resolve(__dirname, "post_1.html"),
         legal: resolve(__dirname, "legal.html"),
       },
     },

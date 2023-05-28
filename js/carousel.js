@@ -101,7 +101,7 @@ function loadPosts() {
   postBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       const recordId = e.target.getAttribute("data-record-id");
-      window.location.href = `/post.html?id=${recordId}`;
+      window.location.href = `/post_1.html?id=${recordId}`;
     });
   });
 }

@@ -56,6 +56,7 @@ img {
 input {
   outline-offset: 1px;
   outline: none;
+  font-family: roboto;
 }
 
 :where(:not(:active):focus-visible) {

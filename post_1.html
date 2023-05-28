@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="This is InsightWave's archive page, here you can browse through our blogs"
+      content="This is InsightWave's individual blog post page, here you can read blog posts"
     />
     <meta name="keywords" content="HTML, CSS, JavaScript, blog site," />
     <meta name="author" content="Espen Henriksen Snerten" />
@@ -26,11 +26,10 @@
       type="image/x-icon"
       href="assets/media/insightWave-icon.ico"
     />
-    <script defer src="/js/archive.js" type="module"></script>
-    <script defer src="/js/sortmenu.js" type="module"></script>
     <script defer src="/js/nav.js" type="module"></script>
+    <script defer src="/js/details.js" type="module"></script>
     <script defer src="/js/scroll.js" type="module"></script>
-    <title>InsightWave | Blog Archive</title>
+    <title>Loading...</title>
     <!-- Hotjar Tracking Code for https://646f504f56d4450008f849e5--insight-wave.netlify.app/ -->
     <script>
       (function (h, o, t, j, a, r) {
@@ -95,34 +94,41 @@
       </div>
     </header>
 
-    <main class="archive_main fade-section">
-      <div class="menu_block"></div>
+    <main class="post_main fade-section">
       <div id="error-container"></div>
-      <div class="archive_interaction_container">
-        <div class="sort_container">
-          <button class="sort_menu_btn" id="sort-menu-btn">
-            Sort<i class="bi bi-chevron-down" id="sort-icon"></i>
-          </button>
-          <ul class="sort_menu" id="sort-menu">
-            <li><button id="sort-new-btn">New to old</button></li>
-            <li><button id="sort-old-btn">Old to new</button></li>
-            <li><button id="sort-likes-btn">Likes</button></li>
-          </ul>
-        </div>
-        <div class="search_container">
-          <form action="" class="search_form">
-            <input type="text" placeholder="Search" id="search-input" />
-            <i class="bi bi-search"></i>
-          </form>
-        </div>
+      <div class="backto_archive_wrapper" id="back">
+        <a href="index.html">Back</a>
       </div>
-      <section class="blog_list" id="airtable-data"></section>
-      <section class="load_section">
-        <div id="loader" class="loader"></div>
+      <div id="loader" class="loader"></div>
+      <section id="post-container" class="post_container"></section>
 
-        <button id="load-more-btn">
-          <i class="bi bi-plus-circle-dotted"></i>
-        </button>
+      <section id="comment-section" class="comment_section">
+        <h2>Comments</h2>
+        <div id="comment-container"></div>
+        <form action="post" id="comment-form" class="comment_form">
+          <div class="comment_form_column">
+            <label for="name">Your name</label>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              id="comment-name"
+              name="name"
+              required
+            />
+          </div>
+
+          <div class="comment_form_column">
+            <label for="comment">Comment</label>
+            <textarea
+              name="comment"
+              id="comment-text"
+              required
+              placeholder="What do you want to share.."
+            ></textarea>
+          </div>
+
+          <button id="comment-btn" type="submit">Submit</button>
+        </form>
       </section>
     </main>
 
