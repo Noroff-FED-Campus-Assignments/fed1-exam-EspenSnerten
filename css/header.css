@@ -5,7 +5,7 @@ header {
   position: sticky;
   top: 0px;
   background-color: var(--main-bg-color);
-  z-index: 9;
+  z-index: 11;
 }
 
 .nav_container {
@@ -36,7 +36,6 @@ header {
   flex-direction: row;
   justify-content: end;
   gap: 2rem;
-  
 }
 
 .nav_box a {
@@ -45,7 +44,7 @@ header {
   font-size: 20px;
   text-align: center;
   line-height: 50px;
-  transition: ease-in-out .3s;
+  transition: ease-in-out 0.3s;
 }
 
 .nav_box a:hover {
@@ -53,7 +52,11 @@ header {
   transform: translateY(10px);
 }
 
-/* mobile menu */ 
+.nav_box a.active {
+  color: var(--main-btn-color);
+}
+
+/* mobile menu */
 
 .mobile_menu {
   display: none;

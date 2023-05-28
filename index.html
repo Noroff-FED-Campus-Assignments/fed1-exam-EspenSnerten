@@ -26,6 +26,7 @@
     <script defer src="/js/contact.js" type="module"></script>
     <script defer src="/js/nav.js" type="module"></script>
     <script defer src="/js/scroll.js" type="module"></script>
+    <script defer src="/js/scrollheader.js" type="module"></script>
     <title>InsightWave</title>
     <!-- Hotjar Tracking Code for https://646f504f56d4450008f849e5--insight-wave.netlify.app/ -->
     <script>
@@ -56,10 +57,10 @@
           </a>
         </div>
         <ul class="nav_box">
-          <a href="#blog-anchor">Home</a>
+          <a href="#blog-anchor" class="active">Home</a>
           <a href="archive.html">Archive</a>
-          <a href="index.html#about-anchor">About</a>
-          <a href="index.html#contact-anchor">Contact</a>
+          <a href="#about-anchor">About</a>
+          <a href="#contact-anchor">Contact</a>
         </ul>
         <!-- button animation belongs to:https://codepen.io/ainalem/pen/wvKOEMV -->
         <button
@@ -91,7 +92,7 @@
       </div>
     </header>
     <main class="index_main fade-section">
-      <section class="blog_container">
+      <section class="blog_container" id="blog">
         <a class="blog_anchor" id="blog-anchor"></a>
         <h1>The latest Articles</h1>
         <div class="carousel_error" id="error-container"></div>
