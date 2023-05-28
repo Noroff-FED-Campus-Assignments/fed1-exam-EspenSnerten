@@ -21,7 +21,107 @@ This project was bootstrapped with Vite.
 
 ## Report
 
-_ADD_YOUR_REPORT_HERE_
+FED1-exam-Espen Henriksen Snerten 
+
+Intro 
+
+This document will serve as my semester exam
+Rapport & Rationale, throughout the document I will detail my design  choices and the work process, ass well as the coding choices I went with.
+
+This project was the toughest one to date, this one really put my problem solving skills to the test, the aim was to get almost all of the marks checked, at least the ones I felt were necessary for the site, I will go further in explaining why I opted to not include some features, to conclude the intro I will say that I am proud of how the site turned out, although I could have implemented a lot more features and animations had I worked a bit smarter.
+
+The research phase
+
+The research for the page was pretty straight forward, I had a look at different blog sites and article sites the get the general idea for how the site is constructed, then I made the first big mistake, I completely ignored looking up airtable ahead of the coding process, and in no small terms was that a big no no, but I will elaborate on that later. 
+
+As in earlier projects this is a one man operation, so resource management is not really in the picture, everything is done by me, so once I felt confident enough in the design that was in my head I started working with figma.
+
+
+The design phase
+
+I will put it in writing for the world to see, I do not enjoy wire-framing, I absolutely can not stand working with gray, white and black blocks and have all the copy be prominently lorem ipsum, so I chose to work on the high fidelity design straight away. And that was the one I went with.
+
+I began with creating the profile of the company I was designing the site for,you can find the profile in my figma file, I also created a couple of logos and consulted with a 
+neutral third party on what was the best choice, and that was the one I went with.
+
+The design and idea that was in my head was almost a super minimalist site, a lot of negative space to calm the viewer and at all times have the focus on the content the site was presenting to you, at first I contemplated using a high contrast colour like yellow or green, but settled on working with shades of blue as my injection of colour on my blank canvas, in my final build that is my deployed site you will see I broke some rules when it comes to what is conventional colour feedback, I chose a blue colour when you pass validation on the contact form instead of the regular green colour we all know, this was done to preserve the overall ascetics of the site, also keeping minimalism in mind.
+
+The fonts I went with are nothing crazy, I worked with just four fonts for the site, and one of those was a one off on a signature I have in the about section, speaking of the signature, I really liked the idea of this fictional ceo putting pen to paper and lending etos to the message that this supposed tech company is presenting you. 
+
+After the high fidelity was done I created a wireframe just to tick the box in the readme, I will once again state that I do not like to wireframe.
+
+
+The coding phase
+
+I began as I have always done, and created the framework for the site with html, there really is nothing to it, the only new thing I did this time is that I used anchor tags for the index site as that contained the about and contact section as well.
+
+I styled all static elements, worked and tinkered around a few design choices that ended up being different from my figma design, I really stand behind the different choices I went with compared to the high fidelity.
+
+Now came the hard part, the dynamic elements of my page, the biggest mistake I made was that I completely blew off how hard I felt the introduction to airtable was gonna be, I struggled for some time setting up a base and understanding the how the fields worked and how I could write a fetch request to display the content on my site, here is where the bulk of my time on this project was spent, once I got it, new bugs and problems occurred, but thanks to AI technology what I once could spend a day on solving I now only spent hours, even minutes.
+
+One really cool thing I worked out is that I can write code in airtable, as in the blogpost it self, wrapping each paragraph in a p tag and using a h tag where appropriate was the key for me to solving how the layout of the text content was going to be rendered, I also managed to include a like button that post to airtable, and that is pretty cool, you can also filter the blogs in the list by the number of likes, with that in place the post it self was done and I could move on to the carousel and the blog archive/list.
+
+I choose to load in 12 and 12 posts at a time on the list so as to have an even number for my grid layout on desktop and mobile, I really struggled trying to style the load more button, as on ios it always came out wonky, the solution to this was a rework of the button and the loader animation, where the button instead of a + sign there now is an icon, and the loader kind of looks like the icon deconstructed and rotating, this was really a blessing in disguise as the final result looks way cooler.
+
+The carousel is really the one thing where I'm not as sure of myself, it work's but I chose to not have an animation on it as it uses a horizontal scroll on mobile devices and that just ended up confusing me personally and the people I showed the project to as I made it, it looks ok, but I feel there is room for improvement or even a complete rework.
+
+The contact section is a functioning form that posts to airtable, and even displays a success modal, had I had more time I would have implemented a loading animation on the button with a timeout on the form submit in the js code to match the success modal, but unfortunately that was cut, I opted to forgo a captcha and instead focused my time on getting search and filter functionality for my list to work, I will include a captcha on my portfolio site as that is actually going to be a site with real world use.
+
+The final thing I will point out in the coding phase is just how last minute the comment functionality was implemented, I feel that it looks good, but the code is a bit of a mess, will work on this in the future, I really wanted to include filters and even the ability to delete your own comment, but that opens the site to user authentication and I had not the knowledge or time to get that in place, also something I will look into.
+
+Bug fixing went as usual, I let friends and family test the site out, and adjusted the design according to feedback and bug fixes along the way, I mostly spoke to and gathered user insight from my partner, and the feedback I got was really useful in realtime.
+
+
+ 
+Conclusion 
+
+to conclude my rapport, I designed and coded a site that caters to the target group in my profile, the site has a neat structure and a minimalist design, the functionality of the site is good enough, you can filter the list, search for authors or post title, and the ability to leave a comment and a like on the post is actually crucial to the idea behind the blog that we got in the repo, that being that this is a site to gather information for a crm for your fictitious future product.     
+
+This was a tough one, I ticked most of the delivery requirements for this project,
+I always feel I could have done more, but time ran out yet again, as always this was a huge learning experience.
+
+Espen Henriksen Snerten
+
+References
+
+Icons: 
+https://icons.getbootstrap.com/
+
+Fonts:
+https://www.1001fonts.com/adam-cg-pro-font.html 
+https://www.1001fonts.com/lovtony-font.html
+https://www.1001fonts.com/reitam-font.html 
+https://fonts.google.com/specimen/Roboto
+
+Media: 
+
+https://unsplash.com/photos/N7FtpkC_P7o 
+https://unsplash.com/photos/0w-uTa0Xz7w 
+https://unsplash.com/photos/2n1SciGY5dI 
+https://unsplash.com/photos/wumr9tBxDSE 
+https://unsplash.com/photos/F_EooJ3-uTs 
+https://unsplash.com/photos/5UQoVk8_d-4 
+https://unsplash.com/photos/30D7430ywf4 
+https://unsplash.com/photos/qZ1KmFjfQq8 
+https://unsplash.com/photos/0GbrjL3vZF4 
+https://unsplash.com/photos/yDgk902WAdY 
+https://unsplash.com/photos/ZZ3qxWFZNRg 
+https://unsplash.com/photos/0aRycsfH57A 
+https://unsplash.com/photos/ckfXPMb2_BI 
+https://unsplash.com/photos/TamMbr4okv4 
+https://unsplash.com/photos/Mis5fyJi7Q0 
+https://unsplash.com/photos/3fPXt37X6UQ 
+https://unsplash.com/photos/6anudmpILw4 
+https://unsplash.com/photos/dp9Jrww_BRs 
+https://unsplash.com/photos/HG3Zy9sCCUg 
+https://unsplash.com/photos/nNj65l7MdBY 
+https://unsplash.com/photos/Fh3Dtg6QX4Q 
+https://unsplash.com/photos/Q1p7bh3SHj8 
+https://unsplash.com/photos/gapYVvUg1M8 
+https://unsplash.com/photos/GGPp4rCpbUM 
+https://unsplash.com/photos/io7dX_1EFCg 
+https://www.sunreef-yachts.com/images/3de2c750a33ca438a4ef1213700bca03b3b431b0/src/488,-sunreef-power-eco-electric-catamarans.jpg?3.8.0.8393.213?3.8.0.8393.213 
+
 
 ## Getting Started
 

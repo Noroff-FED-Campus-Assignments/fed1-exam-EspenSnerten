@@ -60,8 +60,8 @@
 
 .blog_text p,
 .blog_text ul,
-.blog_text h1, 
-.blog_text h2, 
+.blog_text h1,
+.blog_text h2,
 .blog_text h3 {
   display: none;
   flex-direction: column;
@@ -98,7 +98,6 @@ p.list_display {
   margin: auto auto 5rem auto;
   justify-content: center;
 }
-
 
 button#load-more-btn {
   border: none;

@@ -1,8 +1,8 @@
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const postId = params.get("id");
-const airtableApiKey = "keyEqTijnaavQtYbr"; // Replace with your Airtable API key
-const airtableBaseId = "appcDjjskefLIyJVY"; // Replace with your Airtable base ID
+const airtableApiKey = "keyEqTijnaavQtYbr"; // this is not best practice and is just here for convenience sake for this project
+const airtableBaseId = "appcDjjskefLIyJVY"; 
 const airtableTableName = "tbl8r1smekKGfpewz";
 const fields = [
   "Title",

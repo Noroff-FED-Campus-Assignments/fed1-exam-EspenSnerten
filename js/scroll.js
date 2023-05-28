@@ -25,7 +25,7 @@ function fadeInSectionsOnScroll() {
     });
   }
 
-  handleScroll(); // Check on initial page load
+  handleScroll();
 
   window.addEventListener('scroll', handleScroll);
 }

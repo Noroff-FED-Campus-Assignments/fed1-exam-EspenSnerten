@@ -30,7 +30,6 @@
   border-radius: 0;
 }
 
-
 .comment_section h2 {
   font-family: adam-cg-pro;
   font-size: 19px;
@@ -91,6 +90,10 @@
   transition: 0.3s;
 }
 
+.comment_form button:hover {
+  transform: scale(0.97);
+}
+
 .comment_section h2 {
   margin-bottom: 2rem;
 }
@@ -114,13 +117,17 @@
   flex-direction: column;
   width: 200px;
   height: 50px;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
-.comment_info p, 
+.comment_info p,
 .comment_info h4 {
   margin: auto 0;
   padding: 0 0 0 1rem;
+}
+
+.comment_info p {
+  font-size: 14px;
 }
 
 .comment_info h4 {
