@@ -1,13 +1,46 @@
-/* the props */
-@import "open-props/style";
-
-/* optional imports that use the props */
-@import "open-props/normalize";
-@import "animate.css";
-
 @import "css/variables.css";
-@import "css/reset.css";
-@import "css/utilities.css";
+@import "css/anchor.css";
 @import "css/layout.css";
-@import "css/form.css";
-@import "css/ui.css";
+@import "css/header.css";
+@import "css/footer.css";
+@import "css/articles.css";
+@import "css/about.css";
+@import "css/contact.css";
+@import "css/legal.css";
+@import "css/archive.css";
+@import "css/sortmenu.css";
+@import "css/search.css";
+@import "css/post.css";
+@import "css/comment.css";
+@import "css/reset.css";
+@import "css/mediaqueries.css";
+
+@font-face {
+  font-family: "adam-cg-pro";
+  src: url("/assets/fonts/adam-cg-pro.regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "reitam";
+  src: url("/assets/fonts/reitam.regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "lovtony";
+  src: url("/assets/fonts/lovtony.regular.ttf") format("truetype");
+}
+
+body {
+  background-color: var(--main-bg-color);
+  font-family: Roboto;
+}
+footer {
+  background-color: var(--main-footer-color);
+}
+main {
+  width: 100%;
+}
+
+h1,
+h2 {
+  font-family: adam-cg-pro;
+}
+

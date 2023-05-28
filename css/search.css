@@ -1,0 +1,64 @@
+.search_container input:-webkit-autofill,
+.search_container input:-webkit-autofill:focus,
+.search_container textarea:-webkit-autofill,
+.search_container textarea:-webkit-autofill:hover,
+.search_container textarea:-webkit-autofill:focus,
+.search_container select:-webkit-autofill,
+.search_container select:-webkit-autofill:hover,
+.search_container select:-webkit-autofill:focus {
+  border: 1px solid rgba(212, 207, 207, 0);
+  border-bottom: solid 2px rgb(0, 0, 0);
+  -webkit-text-fill-color: rgb(0, 0, 0);
+  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0) inset;
+  transition: background-color 5000s ease-in-out 0s;
+  border-radius: 0;
+}
+
+.search_container {
+  display: flex;
+  margin-left: 50%;
+  width: 100%;
+}
+
+.search_container input {
+  outline: none;
+  border: none;
+  border-bottom: solid 2px black;
+  height: 30px;
+  width: 50%;
+  font-size: 17px;
+  transition: 0.4s;
+  padding-left: 2.5rem;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.search_container input::placeholder {
+  color: var(--main-text-color);
+}
+
+.search_container input:focus {
+  width: 100%;
+}
+
+.search_form {
+  position: relative;
+  width: 100%;
+}
+
+.search_form i {
+  position: absolute;
+  right: 247px;
+  top: 4px;
+  font-size: 19px;
+}
+
+.search_error {
+  height: 55vh;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.search_error i {
+  margin-right: 1rem;
+}

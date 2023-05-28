@@ -14,7 +14,13 @@
     "vite": "^4.2.0"
   },
   "dependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.21.5",
     "animate.css": "^4.1.1",
-    "open-props": "^1.5.5"
+    "babel-loader": "^9.1.2",
+    "dotenv": "^16.0.3",
+    "open-props": "^1.5.5",
+    "webpack": "^5.83.1",
+    "webpack-cli": "^5.1.1"
   }
 }

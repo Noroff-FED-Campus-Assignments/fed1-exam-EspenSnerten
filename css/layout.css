@@ -1,10 +1,3 @@
-/*!
- * Layout
- * Layout classes use the l- prefix to indicate they are layout classes.
- * @tutorial https://web.dev/learn/css/layout/
- * @example https://fed-vocational-astro-course.vercel.app/en/html-css/module-3/css-grids
- */
-
 body {
   margin: 0;
   width: 100%;
@@ -52,4 +45,13 @@ body {
   width: 100%;
   max-width: 1000px;
   margin: 40px auto 0 auto;
+}
+
+.fade-section {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.fade-section.fade-in {
+  opacity: 1;
 }
